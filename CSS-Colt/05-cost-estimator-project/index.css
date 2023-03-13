@@ -1,0 +1,253 @@
+body{
+    background-color: rgb(233, 223, 255);
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    color: rgb(44, 44, 44);
+    font-weight: 500;
+}
+h1{
+    color: rgb(83,49,156);
+    margin: 32px 0 64px 0;
+}
+.container{
+    background-color: #fff;
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    position: relative;
+    padding: 0 64px 64px 64px;
+    box-sizing: border-box;
+}
+
+.tabs{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(200, 175, 255);
+    padding: 16px;
+}
+
+.tabs p{
+    padding: 8px;
+}
+.tabs p:hover{
+    color: rgb(83, 49, 156);
+    cursor: pointer;
+}
+
+.tabs p.active{
+    color: rgb(83, 49, 156);
+    position: relative
+}
+
+.line{
+    height: 3px;
+    width: 100%;
+    background-color: rgb(231, 231, 231);
+    position: absolute;
+    top:100px;
+}
+
+.tabs p.active::before{
+    content: "";
+    height: 3px;
+    border-radius: 10px;
+    width: 200%;
+    background-color: rgb(83, 49, 156);
+    position: absolute;
+    left: -50%;
+    top:68px;
+    z-index: 2;
+}
+
+.toggle-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.toggle-wrapper img{
+    width: 40px;
+    margin: 0 16px;
+}
+
+.toggle{
+    background-color: rgb(83, 49, 156);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 0 16px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 140px;
+    height: 32px;
+    font-size: 12px;
+}
+.toggle span{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.toggle span:last-of-type{
+    color: rgb(83, 49, 156);
+    padding: 4px 18px;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.sessions-card{
+    background-color: rgb(250, 247, 255);
+    text-align: center;
+    padding: 32px;
+    width: 50%;
+    margin: 16px 0;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sessions-card p{
+    font-size: 12px;
+}
+.sessions-card .number{
+    font-size: 54px;
+    color: rgb(83, 49, 156);
+    margin: 0;
+}
+.description{
+    line-height: 32px;
+    margin-bottom: 32px;
+}
+
+.slider{
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+}
+.slider .slide-bar{
+    height: 16px;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(210, 210, 210);
+    width: 100%;
+    border-radius: 20px;
+}
+.slider .bar{
+    width: 30%;
+    height: 18px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(53, 10, 74, 1) 36%,
+        rgba(83, 49, 156, 1) 100%
+      );
+    position: absolute;
+    top: 0;
+}
+
+.slider .pointer{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: rgb(83, 49, 156);
+    position: absolute;
+    left: 28%;
+    top: -5px;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: transform 0.15s ease-in;
+}
+
+.slider .pointer:hover{
+    transform: scale(1.15);
+}
+
+.slider .scale ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    color: rgb(166, 166, 166);
+    font-weight: bold;
+}
+
+.cards-container{
+    display: flex;
+}
+
+.card{
+    background-color: rgb(250,247, 255);
+    border-radius: 10px;
+    margin: 16px;
+    box-shadow: 0px 3px 11px 1px rgb(0, 0, 0, 0.1);
+    padding: 16px 32px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(83, 49, 156);
+    transition: transform 0.15s ease-in;
+    position: relative;
+}
+.card .top-section{
+    text-transform: uppercase;
+    padding: 8px;
+}
+.card .top-section p{
+    margin: 4px 0;
+}
+.card .price{
+    font-size: 42px;
+    color: rgb(44, 44, 44);
+}
+
+.card hr{
+    width: 30%;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 2px;
+}
+
+.card button{
+    border: none;
+    color: white;
+    background-color: rgb(83, 49, 156);
+    padding: 16px;
+    border-radius: 10px;
+    transition: transform 0.15s ease-in;
+    font-weight: bold;
+    margin: 8px 0;
+}
+.card button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card:hover{
+    transform: translateY(-8px);
+}
+
+.card .discount{
+    color: white;
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(53, 10, 74, 1) 36%,
+        rgba(83, 49, 156, 1) 100%
+      );
+    position: absolute;
+    top:-24px;
+    left: 0;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
